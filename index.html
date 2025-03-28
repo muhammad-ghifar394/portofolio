@@ -11,112 +11,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Header -->
     <header>
         <h1>Muhammad Ghifar</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Project</a></li>
-                <li><a href="#achievements">Achievement</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#social">Media Social</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Foto Profil -->
     <section id="home" class="profile">
-        <img src="photo profile.jpg" alt="Foto Muhammad Ghifar">
+        <img src="photo-profile.jpg" alt="Foto Saya" class="profile-pic">
         <h2>Muhammad Ghifar</h2>
         <p>Front-End Developer | IT Enthusiast</p>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
-        <fieldset>
-            <legend>Projects</legend>
-            <div class="scroll-container">
-                <div class="card">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project 1</h3>
-                    <button onclick="showDetail('Detail Project 1')">Detail</button>
-                </div>
-                <div class="card">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Project 2</h3>
-                    <button onclick="showDetail('Detail Project 2')">Detail</button>
-                </div>
-                <div class="card">
-                    <img src="project3.jpg" alt="Project 3">
-                    <h3>Project 3</h3>
-                    <button onclick="showDetail('Detail Project 3')">Detail</button>
-                </div>
-                <div class="card">
-                    <img src="project4.jpg" alt="Project 4">
-                    <h3>Project 4</h3>
-                    <button onclick="showDetail('Detail Project 4')">Detail</button>
-                </div>
-                <div class="card">
-                    <img src="project5.jpg" alt="Project 5">
-                    <h3>Project 5</h3>
-                    <button onclick="showDetail('Detail Project 5')">Detail</button>
-                </div>
+    <section id="projects" class="card-section">
+        <h2>Projects</h2>
+        <div class="scroll-container">
+            <div class="card">
+                <label>Project 1</label>
+                <img src="project1.jpg" alt="Project 1">
+                <button class="detail-btn">Detail</button>
             </div>
-        </fieldset>
+            <div class="card">
+                <label>Project 2</label>
+                <img src="project2.jpg" alt="Project 2">
+                <button class="detail-btn">Detail</button>
+            </div>
+            <div class="card">
+                <label>Project 3</label>
+                <img src="project3.jpg" alt="Project 3">
+                <button class="detail-btn">Detail</button>
+            </div>
+            <div class="card">
+                <label>Project 4</label>
+                <img src="project4.jpg" alt="Project 4">
+                <button class="detail-btn">Detail</button>
+            </div>
+            <div class="card">
+                <label>Project 5</label>
+                <img src="project5.jpg" alt="Project 5">
+                <button class="detail-btn">Detail</button>
+            </div>
+        </div>
     </section>
 
-    <!-- Achievements (Format sama seperti project) -->
-    <section id="achievements">
-        <fieldset>
-            <legend>Achievements</legend>
-            <div class="scroll-container">
-                <div class="card">
-                    <img src="achievement1.jpg" alt="Achievement 1">
-                    <h3>Hackathon Winner</h3>
-                    <button onclick="showDetail('Detail Achievement 1')">Detail</button>
-                </div>
+    <section id="achievements" class="card-section">
+        <h2>Achievements</h2>
+        <div class="scroll-container">
+            <div class="card">
+                <label>Hackathon Winner</label>
+                <p>Juara 1 Hackathon Nasional 2024</p>
             </div>
-        </fieldset>
+            <div class="card">
+                <label>Certification</label>
+                <p>Sertifikasi Front-End Developer</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Experience (Format sama seperti project) -->
-    <section id="experience">
-        <fieldset>
-            <legend>Experience</legend>
-            <div class="scroll-container">
-                <div class="card">
-                    <img src="experience1.jpg" alt="Experience 1">
-                    <h3>Front-End Developer</h3>
-                    <button onclick="showDetail('Detail Experience 1')">Detail</button>
-                </div>
+    <section id="experience" class="card-section">
+        <h2>Experience</h2>
+        <div class="scroll-container">
+            <div class="card">
+                <label>Internship</label>
+                <p>Front-End Developer di Startup X</p>
             </div>
-        </fieldset>
+            <div class="card">
+                <label>Freelance</label>
+                <p>Website Designer & Developer</p>
+            </div>
+        </div>
     </section>
 
-    <!-- Media Social -->
-    <section id="social">
-        <fieldset>
-            <legend>Media Social</legend>
-            <div class="social-links">
-                <a href="https://linkedin.com" class="linkedin">LinkedIn</a>
-                <a href="https://github.com" class="github">GitHub</a>
-                <a href="https://instagram.com" class="instagram">Instagram</a>
-            </div>
-        </fieldset>
+    <section id="social" class="social-section">
+        <h2>Media Social</h2>
+        <a href="#" class="linkedin">LinkedIn</a>
+        <a href="#" class="github">GitHub</a>
+        <a href="#" class="instagram">Instagram</a>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>© 2025 Muhammad Ghifar</p>
+        <p>&copy; 2025 Muhammad Ghifar</p>
     </footer>
-
-    <script>
-        function showDetail(text) {
-            alert(text);
-        }
-    </script>
-
 </body>
 </html>
