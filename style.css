@@ -1,23 +1,57 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
-}
-
-header {
-    background-color: #333;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: white;
+    text-align: center;
+}
+.container {
+    padding: 50px 20px;
+}
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
     padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
 }
-
-section {
-    margin: 20px;
+.card:hover {
+    transform: scale(1.05);
 }
-
-footer {
-    background-color: #333;
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.grid .card {
+    width: 200px;
+    height: 100px;
+}
+.social {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
     color: white;
+    transition: transform 0.3s ease;
+}
+.social:hover {
+    transform: scale(1.1);
+}
+footer {
+    background: rgba(255, 255, 255, 0.1);
     padding: 10px;
     position: fixed;
     bottom: 0;
