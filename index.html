@@ -11,52 +11,112 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="card">
+
+    <!-- Header -->
+    <header>
         <h1>Muhammad Ghifar</h1>
-        <p>Front-End Developer | UI/UX Enthusiast</p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#achievements">Achievement</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#social">Media Social</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <section class="about card">
-        <div class="container">
-            <img src="photo profile.jpg" alt="Foto Saya">
-            <div class="description">
-                <h2>Tentang Saya</h2>
-                <p>Saya adalah seorang front-end developer yang suka membangun tampilan website yang menarik dan interaktif.</p>
+
+    <!-- Foto Profil -->
+    <section id="home" class="profile">
+        <img src="photo-profile.jpg" alt="Foto Muhammad Ghifar">
+        <h2>Muhammad Ghifar</h2>
+        <p>Front-End Developer | IT Enthusiast</p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <fieldset>
+            <legend>Projects</legend>
+            <div class="scroll-container">
+                <div class="card">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <button onclick="showDetail('Detail Project 1')">Detail</button>
+                </div>
+                <div class="card">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <button onclick="showDetail('Detail Project 2')">Detail</button>
+                </div>
+                <div class="card">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <button onclick="showDetail('Detail Project 3')">Detail</button>
+                </div>
+                <div class="card">
+                    <img src="project4.jpg" alt="Project 4">
+                    <h3>Project 4</h3>
+                    <button onclick="showDetail('Detail Project 4')">Detail</button>
+                </div>
+                <div class="card">
+                    <img src="project5.jpg" alt="Project 5">
+                    <h3>Project 5</h3>
+                    <button onclick="showDetail('Detail Project 5')">Detail</button>
+                </div>
             </div>
-        </div>
+        </fieldset>
     </section>
-    
-    <section class="projects card">
-        <h2>Project Saya</h2>
-        <div class="grid">
-            <div class="project-card">Project 1</div>
-            <div class="project-card">Project 2</div>
-            <div class="project-card">Project 3</div>
-        </div>
+
+    <!-- Achievements (Format sama seperti project) -->
+    <section id="achievements">
+        <fieldset>
+            <legend>Achievements</legend>
+            <div class="scroll-container">
+                <div class="card">
+                    <img src="achievement1.jpg" alt="Achievement 1">
+                    <h3>Hackathon Winner</h3>
+                    <button onclick="showDetail('Detail Achievement 1')">Detail</button>
+                </div>
+            </div>
+        </fieldset>
     </section>
-    
-    <section class="education card">
-        <h2>Pendidikan</h2>
-        <p>Institut Teknologi Sumatera - Informatics Engineering</p>
+
+    <!-- Experience (Format sama seperti project) -->
+    <section id="experience">
+        <fieldset>
+            <legend>Experience</legend>
+            <div class="scroll-container">
+                <div class="card">
+                    <img src="experience1.jpg" alt="Experience 1">
+                    <h3>Front-End Developer</h3>
+                    <button onclick="showDetail('Detail Experience 1')">Detail</button>
+                </div>
+            </div>
+        </fieldset>
     </section>
-    
-    <section class="achievements card">
-        <h2>Prestasi</h2>
-        <p>- Juara 1 Hackathon Nasional 2024</p>
-        <p>- Sertifikasi Front-End Developer</p>
+
+    <!-- Media Social -->
+    <section id="social">
+        <fieldset>
+            <legend>Media Social</legend>
+            <div class="social-links">
+                <a href="https://linkedin.com" class="linkedin">LinkedIn</a>
+                <a href="https://github.com" class="github">GitHub</a>
+                <a href="https://instagram.com" class="instagram">Instagram</a>
+            </div>
+        </fieldset>
     </section>
-    
-    <section class="social-media card">
-        <h2>Hubungi Saya</h2>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/muhammad-ghifar-085a3a344" class="social">LinkedIn</a>
-            <a href="https://github.com/muhammad-ghifar394" class="social">GitHub</a>
-            <a href="https://www.instagram.com/mhmmdghfr_394" class="social">Instagram</a>
-        </div>
-    </section>
-    
-    <footer class="card">
+
+    <!-- Footer -->
+    <footer>
         <p>© 2025 Muhammad Ghifar</p>
     </footer>
+
+    <script>
+        function showDetail(text) {
+            alert(text);
+        }
+    </script>
+
 </body>
 </html>
