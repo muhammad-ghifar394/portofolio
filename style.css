@@ -1,31 +1,48 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    background: linear-gradient(135deg, #0a1931, #004e92);
     color: white;
     text-align: center;
 }
-.container {
-    padding: 50px 20px;
-}
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
+header {
     padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    margin: 20px;
 }
-.card:hover {
-    transform: scale(1.05);
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
 }
 img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 3px solid white;
+    margin-right: 20px;
+}
+.description {
+    max-width: 500px;
+    text-align: left;
+}
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
 }
 .grid {
     display: flex;
@@ -37,6 +54,11 @@ img {
     width: 200px;
     height: 100px;
 }
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
 .social {
     display: inline-block;
     margin: 10px;
@@ -45,15 +67,16 @@ img {
     background: rgba(255, 255, 255, 0.2);
     text-decoration: none;
     color: white;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 .social:hover {
     transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
 }
 footer {
     background: rgba(255, 255, 255, 0.1);
     padding: 10px;
-    position: fixed;
-    bottom: 0;
+    position: relative;
     width: 100%;
+    margin-top: 50px;
 }
