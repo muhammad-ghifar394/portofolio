@@ -33,27 +33,27 @@
     <section id="projects" class="card-section">
         <h2>Projects</h2>
         <div class="scroll-container">
-            <div class="card">
+            <div class="card" id="project1">
                 <label>Project 1</label>
                 <img src="project1.jpg" alt="Project 1">
                 <button class="detail-btn">Detail</button>
             </div>
-            <div class="card">
+            <div class="card" id="project2">
                 <label>Project 2</label>
                 <img src="project2.jpg" alt="Project 2">
                 <button class="detail-btn">Detail</button>
             </div>
-            <div class="card">
+            <div class="card" id="project3">
                 <label>Project 3</label>
                 <img src="project3.jpg" alt="Project 3">
                 <button class="detail-btn">Detail</button>
             </div>
-            <div class="card">
+            <div class="card" id="project4">
                 <label>Project 4</label>
                 <img src="project4.jpg" alt="Project 4">
                 <button class="detail-btn">Detail</button>
             </div>
-            <div class="card">
+            <div class="card" id="project5">
                 <label>Project 5</label>
                 <img src="project5.jpg" alt="Project 5">
                 <button class="detail-btn">Detail</button>
@@ -99,5 +99,41 @@
     <footer>
         <p>&copy; 2025 Muhammad Ghifar</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                smoothScroll(targetElement, 1000); // 1000ms = 1 detik
+            });
+        });
+
+        function smoothScroll(target, duration) {
+            const startPosition = window.pageYOffset;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return (c / 2) * t * t + b;
+                t--;
+                return (-c / 2) * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+    </script>
 </body>
 </html>
