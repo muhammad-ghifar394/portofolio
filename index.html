@@ -33,27 +33,27 @@
     <section id="projects" class="card-section">
         <h2>Projects</h2>
         <div class="scroll-container">
-            <div class="card" id="project1">
+            <div class="card">
                 <label>Project 1</label>
                 <img src="project1.jpg" alt="Project 1">
                 <button class="detail-btn">Detail</button>
             </div>
-            <div class="card" id="project2">
+            <div class="card">
                 <label>Project 2</label>
                 <img src="project2.jpg" alt="Project 2">
                 <button class="detail-btn">Detail</button>
             </div>
-            <div class="card" id="project3">
+            <div class="card">
                 <label>Project 3</label>
                 <img src="project3.jpg" alt="Project 3">
                 <button class="detail-btn">Detail</button>
             </div>
-            <div class="card" id="project4">
+            <div class="card">
                 <label>Project 4</label>
                 <img src="project4.jpg" alt="Project 4">
                 <button class="detail-btn">Detail</button>
             </div>
-            <div class="card" id="project5">
+            <div class="card">
                 <label>Project 5</label>
                 <img src="project5.jpg" alt="Project 5">
                 <button class="detail-btn">Detail</button>
@@ -107,7 +107,7 @@
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
 
-                smoothScroll(targetElement, 1000); // 1000ms = 1 detik
+                smoothScroll(targetElement, 1500); // 1500ms = 1.5 detik
             });
         });
 
@@ -120,12 +120,13 @@
             function animation(currentTime) {
                 if (startTime === null) startTime = currentTime;
                 const timeElapsed = currentTime - startTime;
-                const run = ease(timeElapsed, startPosition, distance, duration);
+                const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+
                 window.scrollTo(0, run);
                 if (timeElapsed < duration) requestAnimationFrame(animation);
             }
 
-            function ease(t, b, c, d) {
+            function easeInOutQuad(t, b, c, d) {
                 t /= d / 2;
                 if (t < 1) return (c / 2) * t * t + b;
                 t--;
