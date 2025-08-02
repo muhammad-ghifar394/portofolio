@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf App</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #0d1b2a;
+        color: #e0e1dd;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        padding: 20px;
+      }
+
+      header {
+        background-color: #123456;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 60px;
+      }
+
+      form, .book-list {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 200, 255, 0.8);
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+        margin: 10px 0;
+      }
+
+      input, button {
+        width: 100%;
+        height: 40px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      input {
+        background: white;
+        color: black;
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.6);
+      }
+
+      button {
+        background: #1b98e0;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.8);
+      }
+
+      button:hover {
+        box-shadow: 0 0 15px rgba(0, 200, 255, 1);
+      }
+
+      label {
+        display: block;
+        font-size: 18px;
+        margin-top: 10px;
+        text-align: left;
+        padding-left: 5px;
+        color: white;
+        font-weight: bold;
+      }
+
+      input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+      }
+
+      .search-bar {
+        width: 90%;
+        max-width: 400px;
+        margin: 20px 0;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.6);
+      }
+
+      .book-item {
+        background: rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border: 2px solid #1b98e0;
+        border-radius: 10px;
+        margin: 10px 0;
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.6);
+      }
+
+      .book-item h3 {
+        font-size: 20px;
+        color: white;
+      }
+
+      .book-item p {
+        font-size: 16px;
+        color: #e0e1dd;
+      }
+
+      .book-item button {
+        background: #e0e1dd;
+        color: #0d1b2a;
+        font-weight: bold;
+        margin: 5px auto;
+        cursor: pointer;
+      }
+
+      .book-item button:hover {
+        background: #1b98e0;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Bookshelf App</h1>
+    </header>
+
+    <h2>Pendaftaran Buku</h2>
+    <form id="bookForm" data-testid="bookForm">
+      <label for="bookFormTitle">Judul Buku</label>
+      <input type="text" id="bookFormTitle" required data-testid="bookFormTitleInput">
+
+      <label for="bookFormAuthor">Penulis</label>
+      <input type="text" id="bookFormAuthor" required data-testid="bookFormAuthorInput">
+
+      <label for="bookFormYear">Tahun</label>
+      <input type="number" id="bookFormYear" required data-testid="bookFormYearInput"  min="1900" max="2025">
+
+      <label for="bookFormIsComplete">
+        <input type="checkbox" id="bookFormIsComplete" data-testid="bookFormIsCompleteCheckbox"> Selesai dibaca
+      </label>
+
+      <button type="submit" data-testid="bookFormSubmitButton">Tambahkan Buku</button>
+    </form>
+
+    <h2>Pencarian Buku</h2>
+    <form id="searchBook" data-testid="searchBookForm">
+      <label for="searchBookTitle">Judul</label>
+      <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput">
+      <button id="searchSubmit" type="submit" data-testid="searchBookFormSubmitButton">Cari</button>
+    </form>
+
+    <h2>Belum Selesai Dibaca</h2>
+    <div id="incompleteBookList" class="book-list" data-testid="incompleteBookList">
+      <!-- Buku-buku yang belum selesai dibaca akan muncul di sini -->
+    </div>
+
+    <h2>Selesai Dibaca</h2>
+    <div id="completeBookList" class="book-list" data-testid="completeBookList">
+      <!-- Buku-buku yang sudah selesai dibaca akan muncul di sini -->
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
