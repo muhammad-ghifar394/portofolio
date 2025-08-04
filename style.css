@@ -126,6 +126,7 @@ section {
   max-width: 800px;
   margin: 0;
   padding: 0 20px;
+  scroll-margin-top: 50px;
 }
 
 
@@ -307,6 +308,72 @@ nav ul {
   text-align: center;
 }
 
+#education h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#education table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 2px black solid;
+}
+
+#education th,
+#education td {
+  padding: 12px;
+  text-align: center;
+  border: 2px black solid;
+  vertical-align: middle;
+}
+
+/* Header */
+#education th {
+  background-color: #fff;
+  color: #000000;
+  border: 2px black solid;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#education img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  #education table, 
+  #education thead, 
+  #education tbody, 
+  #education th, 
+  #education td, 
+  #education tr {
+    display: block;
+    width: 100%;
+  }
+
+  #education tr {
+    margin-bottom: 1rem;
+    border: 2px black solid;
+    padding: 0.5rem;
+  }
+
+  #education td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    order: 2px black solid;
+  }
+
+  #education th {
+    display: none;
+  }
+}
+
 .contact {
   text-align: left;
   margin-top: 60px;
@@ -455,52 +522,6 @@ nav ul {
   background-color: #333;
 }
 
-body.night-mode {
-  background-color: #071952;
-  color: #97FEED;
-}
-
-body.night-mode header,
-body.night-mode footer,
-body.night-mode .btn,
-body.night-mode .btn-toggle,
-body.night-mode .certificate-card,
-body.night-mode .project-card,
-body.night-mode .progress-bar,
-body.night-mode nav,
-body.night-mode .logo {
-  background-color: #071952;
-  color: #97FEED;
-  border-color: #97FEED;
-}
-
-body.night-mode a,
-body.night-mode .nav-links a {
-  color: #97FEED;
-}
-
-body.night-mode .progress {
-  background-color: #97FEED;
-}
-
-body.night-mode .certificate-card p {
-  color: #97FEED;
-}
-
-body.night-mode .btn:hover,
-body.night-mode .btn-toggle:hover {
-  background-color: #97FEED;
-  color: #071952;
-}
-
-body.night-mode h3 {
-  border-bottom: 2px solid #97FEED;
-}
-
-body.night-mode .social-icons a img, body.night-mode .stack-grid img {
-  filter: brightness(0) saturate(100%) invert(87%) sepia(23%) saturate(279%) hue-rotate(121deg) brightness(107%) contrast(101%);
-}
-
 .theme-switch {
   position: relative;
   display: inline-block;
@@ -585,11 +606,6 @@ a,
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, border-color 0.4s ease-in-out;
 }
 
-body.night-mode .project-card a h4,
-body.night-mode .project-card a p {
-  color: #97FEED;
-}
-
 .form {
   max-width: 600px;
   margin: 80px 20px auto;
@@ -660,37 +676,6 @@ body.night-mode .project-card a p {
   background-color: #333;
 }
 
-body.night-mode .form {
-  background-color: #071952;
-  border-color: #97FEED;
-  color: #97FEED;
-}
-
-body.night-mode .form label {
-  color: #97FEED;
-}
-
-body.night-mode .form input,
-body.night-mode .form textarea {
-  background-color: #071952;
-  border: 2px solid #97FEED;
-  color: #97FEED;
-}
-
-body.night-mode .form input::placeholder,
-body.night-mode .form textarea::placeholder {
-  color: #97FEEDAA;
-}
-
-body.night-mode .form button[type="submit"] {
-  background-color: #97FEED;
-  color: #071952;
-}
-
-body.night-mode .form button[type="submit"]:hover {
-  background-color: #62c6c6;
-}
-
 .project-card {
   display: block;
   border: 2px solid #111;
@@ -712,11 +697,6 @@ body.night-mode .form button[type="submit"]:hover {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 }
 
-body.night-mode .project-card {
-  background-color: #071952;
-  color: #97FEED;
-  border-color: #97FEED;
-}
 
 .nav-links a {
   position: relative;
@@ -743,21 +723,6 @@ body.night-mode .project-card {
 
 .nav-links a:hover::after,
 .nav-links a:focus::after {
-  opacity: 1;
-  transform: scale(1);
-}
-
-body.night-mode .nav-links a {
-  color: #97FEED;
-}
-
-body.night-mode .nav-links a::after {
-  border-color: #97FEED;
-  background: #071952;
-}
-
-body.night-mode .nav-links a:hover::after,
-body.night-mode .nav-links a:focus::after {
   opacity: 1;
   transform: scale(1);
 }
@@ -789,12 +754,6 @@ body.night-mode .nav-links a:focus::after {
 .tooltip:hover .tooltip-text {
   opacity: 1;
   transform: translateX(-50%) translateY(-4px);
-}
-
-body.night-mode .tooltip-text {
-  background-color: #071952;
-  color: #97FEED;
-  border: 2px solid #97FEED;
 }
 
 .tech-stack {
@@ -832,10 +791,6 @@ body.night-mode .tooltip-text {
   transform: scale(1.1);
 }
 
-body.night-mode .stack-item p {
-  color: #97FEED;
-}
-
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -855,4 +810,158 @@ body.night-mode .stack-item p {
 
 .section-show {
   animation: fadeUp 1.2s ease-out forwards;
+}
+
+#experience h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#experience ul {
+  list-style: square;
+  padding: 0;
+}
+
+#experience li {
+  background: #fff;
+  margin-bottom: 1rem;
+}
+
+#experience h4 {
+  margin: 0
+  color: #007bff;
+}
+
+.about-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.label {
+  width: 150px;
+  font-weight: bold;
+}
+
+.separator {
+  margin: 0 8px;
+}
+
+.value {
+  flex: 1;
+}
+
+/*night mode*/
+
+body.night-mode {
+  background-color: #071952;
+  color: #97FEED;
+}
+
+body.night-mode header,
+body.night-mode footer,
+body.night-mode .btn,
+body.night-mode .btn-toggle,
+body.night-mode .certificate-card,
+body.night-mode .project-card,
+body.night-mode .progress-bar,
+body.night-mode nav,
+body.night-mode .logo,
+body.night-mode td,
+body.night-mode .form{
+  background-color: #071952;
+  color: #97FEED;
+  border-color: #97FEED;
+}
+
+body.night-mode a,
+body.night-mode .nav-links a,
+body.night-mode .certificate-card p,
+body.night-mode .project-card a h4,
+body.night-mode .project-card a p,
+body.night-mode .form label  {
+  color: #97FEED;
+}
+
+body.night-mode .progress {
+  background-color: #97FEED;
+}
+
+body.night-mode .btn:hover,
+body.night-mode .btn-toggle:hover {
+  background-color: #97FEED;
+  color: #071952;
+}
+
+body.night-mode h3 {
+  border-bottom: 2px solid #97FEED;
+}
+
+body.night-mode .social-icons a img, body.night-mode .stack-grid img {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(23%) saturate(279%) hue-rotate(121deg) brightness(107%) contrast(101%);
+}
+
+body.night-mode .form input,
+body.night-mode .form textarea {
+  background-color: #071952;
+  border: 2px solid #97FEED;
+  color: #97FEED;
+}
+
+body.night-mode .form input::placeholder,
+body.night-mode .form textarea::placeholder {
+  color: #97FEEDAA;
+}
+
+body.night-mode .form button[type="submit"] {
+  background-color: #97FEED;
+  color: #071952;
+}
+
+body.night-mode .form button[type="submit"]:hover {
+  background-color: #62c6c6;
+}
+
+body.night-mode .project-card {
+  background-color: #071952;
+  color: #97FEED;
+  border-color: #97FEED;
+}
+
+body.night-mode .nav-links a {
+  color: #97FEED;
+}
+
+body.night-mode .nav-links a::after {
+  border-color: #97FEED;
+  background: #071952;
+}
+
+body.night-mode .nav-links a:hover::after,
+body.night-mode .nav-links a:focus::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+body.night-mode .tooltip-text {
+  background-color: #071952;
+  color: #97FEED;
+  border: 2px solid #97FEED;
+}
+
+body.night-mode .stack-item p {
+  color: #97FEED;
+}
+
+body.night-mode #education th,
+body.night-mode #education td,
+body.night-mode #experience li{
+  background-color: #071952;
+  color: #97FEED;
+  border-color: #97FEED;
 }
