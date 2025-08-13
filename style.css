@@ -57,8 +57,6 @@ nav {
   transition: 0.3s;
 }
 
-
-
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -130,7 +128,6 @@ section {
   padding: 0 20px;
   scroll-margin-top: 50px;
 }
-
 
 h2 {
   font-size: 1.8rem;
@@ -308,72 +305,6 @@ nav ul {
   gap: 10px;
   padding: 10px 20px;
   text-align: center;
-}
-
-#education h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-#education table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #fff;
-  border: 2px black solid;
-}
-
-#education th,
-#education td {
-  padding: 12px;
-  text-align: center;
-  border: 2px black solid;
-  vertical-align: middle;
-}
-
-/* Header */
-#education th {
-  background-color: #000;
-  color: #fff;
-  border: 2px black solid;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-#education img {
-  width: 100px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  object-fit: contain;
-}
-
-@media (max-width: 768px) {
-  #education table, 
-  #education thead, 
-  #education tbody, 
-  #education th, 
-  #education td, 
-  #education tr {
-    display: block;
-    width: 100%;
-  }
-
-  #education tr {
-    margin-bottom: 1rem;
-    border: 2px black solid;
-    padding: 0.5rem;
-  }
-
-  #education td {
-    text-align: right;
-    padding-left: 50%;
-    position: relative;
-    order: 2px black solid;
-  }
-
-  #education th {
-    display: none;
-  }
 }
 
 .contact {
@@ -595,10 +526,6 @@ a,
   transition: background-color 0.6s ease-in-out, color 0.4s ease-in-out, border-color 0.4s ease-in-out;
 }
 
-.about {
-  padding-top: 120px;
-}
-
 .project-card a h4, 
 .project-card a p, 
 .certificate-card a h4,
@@ -814,33 +741,6 @@ a,
   animation: fadeUp 1.2s ease-out forwards;
 }
 
-#experience h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-#experience ul {
-  list-style: square;
-  padding: 0;
-}
-
-#experience li {
-  background: #fff;
-  margin-bottom: 1rem;
-}
-
-#experience h4 {
-  margin: 0
-  color: #007bff;
-}
-
-.about-flex {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
-}
-
 .row {
   display: flex;
 }
@@ -856,13 +756,6 @@ a,
 
 .value {
   flex: 1;
-}
-
-.box {
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-  padding-bottom: 20px;
 }
 
 /*night mode*/
@@ -965,12 +858,4 @@ body.night-mode .tooltip-text {
 
 body.night-mode .stack-item p {
   color: #97FEED;
-}
-
-body.night-mode #education th,
-body.night-mode #education td,
-body.night-mode #experience li{
-  background-color: #071952;
-  color: #97FEED;
-  border-color: #97FEED;
 }
